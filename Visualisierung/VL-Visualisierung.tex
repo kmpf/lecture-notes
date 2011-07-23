@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,oneside,normalheadings,abstracton,liststotoc,bibtotoc,titlepage,pdftex]{scrartcl}
+\documentclass[12pt,a4paper,oneside,normalheadings,abstracton,liststotoc,bibtotoc,titlepage,pdftex]{scrbook}
 %\usepackage {ngerman}
 \usepackage [ngerman] {babel}
 \usepackage[utf8]{inputenc}
@@ -21,7 +21,7 @@
 
 %\extratitle{~}
 \titlehead{Universität Leipzig\\Fakultät für Fakultät für Mathematik und Informatik}
-\subject{Vorlesungsmitschrift SoSe 11}
+\subject{Vorlesungsmitschrift WiSe 2010}
 \title{Visualisierung}
 \author{gehalten von Prof. Dr. Gerik Scheuermann und Dr. Alexander Wiebel\\
 Mitschrift von Tobias Mede und Christoph Kämpf}
@@ -29,9 +29,6 @@ Mitschrift von Tobias Mede und Christoph Kämpf}
 
 \maketitle[1]
 
-\begin{abstract}
-
-\end{abstract}
 
 \tableofcontents
 \pagebreak
@@ -58,18 +55,18 @@ Maximal 2n-5 Ecken und 3n-6 Kanten. Delaunay Triangulierung.
 
 \section{Vektoranalysis}
 
+\section{Direkte Visualisierung}
+\subsection{Visualisierung von Vektordaten}
+\subsubsection{Experimentelle Strömungsvisualisierung}
+Eine Möglichkeit der experimentellen Strömungsvisualisierung ist das Einbringen von sichtbarem Fremdmaterial in die Strömung. Dabei unterscheidet man:
+\begin{description}
+\item[\textit{Time lines}:] Partikel werden zur gleichen Zeit (z.B. entlang einer Linie) in die Strömung eingebracht
+\item[\textit{Streak lines}:] Partikel werden an einer fixen Position (z.B. mittels Düsen am umströmten Objekt) in die Strömung eingebracht
+\item[\textit{Path lines}:] Partikel werden statistisch verteilt in Strömung eingebracht und ihr Weg für eine kurze Zeit (z.B. lange Belichtungszeit von leuchtenden Partikeln) nachverfolgt
+\end{description}
 
-\begin{tabbing}
-Modellebenen: \= - komplexe Sachverhalte vereinfachen $\rightarrow$ Simplifikation \\
-\> - Illustration \\
-\> - mechanisches Modell (der Moleküle) $\curvearrowright$ \= Atome $\rightarrow$ Massenpunkte \\
-\> \> Bindungen $\rightarrow$ Federn \\
-\> $\overbrace{empirischeModelle}$ \\
-\> - mathematische Modellierung \\
-\> Ziel: Extrapolation auf andere Vorgänge \\
-\end{tabbing}
-
-
+\subsubsection{Strömungsvisualisierung gemessener Daten}
+Um einen schnellen Eindruck vom gemessen Vektorfeld zu bekommen bietet sich die \textit{Hedgehog}-Technik an.
 
 
 \end{document}
