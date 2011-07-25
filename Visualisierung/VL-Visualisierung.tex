@@ -81,8 +81,6 @@ Die Ableitung eines Tensors x. Ordnung ergibt einen Tensor der Ordnung x+1.
 \section{Analysemethoden}
 Barizentrische Koordinaten eines 1-, 2- oder 3-dimensionalen Simplex. Ein Simplex ist eine Menge von Punkten \dots . 
 
-
-
 \section{Vektorfeldtopologie}
 $\upalpha$-Becken umfasst alle Punkte deren Stromlinien aus derselben Quelle (Punkt, Linie, etc.) stammen. $\upomega$-Becken umfasst alle Punkte deren Stromlinien die selbe Senke (Punkt, Linie, etc.) haben.
 
@@ -96,8 +94,16 @@ Eine Möglichkeit der experimentellen Strömungsvisualisierung ist das Einbringe
 \item[\textit{Path lines}:] Partikel werden statistisch verteilt in Strömung eingebracht und ihr Weg für eine kurze Zeit (z.B. lange Belichtungszeit von leuchtenden Partikeln) nachverfolgt
 \end{description}
 
-\subsubsection{Strömungsvisualisierung gemessener Daten}
-Um einen schnellen Eindruck vom gemessen Vektorfeld zu bekommen bietet sich die \textit{Hedgehog}-Technik an.
+\subsubsection{Einfache Strömungsvisualisierung}
+Um einen schnellen Eindruck vom gemessen Vektorfeld zu bekommen bietet sich die \textit{Hedgehog}-Technik an. Diese repräsentiert die Vektoren an den Gitterpunkten mit einer Linie oder einem Pfeil. Um einen besseren Eindruck der lokalen Richtung des Feldes zu vermitteln, kann man diese Linien/Pfeile noch entlang der Strömung krümmen. Dadurch erhält man sogenannte \textbf{streamlets}. Sollen noch mehr lokale Informationen dargestellt werden, kann man den Hedgehog zur \textbf{local flow probe} erweitern. Diese gibt zusätzlich Auskunft über Beschleunigungsbetrag, Rotation, Divergenz, Scherung und Krümmung.
+
+\subsubsection{Visualisierung aus Strömungs- und Festkörpermechanik}
+Hierbei enthält das Vektorfeld Informationen über Bewegungen. Diese Bewegungen können durch \textbf{Warping} (Verformung des Objekts oder des Beobachtungsraums) visualisiert werden. Für die Visualisierung von Vibrationen können \textbf{Displacement Plots} verwendet. Dabei wird nicht der gesamte Vektor genutzt, sondern nur der Anteil des Vektors in Normalenrichtung (der senkrecht auf der Objektoberfläche steht).
+
+\subsubsection{Stromlinientechniken}
+Stromlinien (= Integrationskurven) werden an einem Punkt im Beobachtungsraum gestartet und nach auswerten des lokalen Vektorfeldes wird ein Linie zwischen dem Ausgangs- und dem Endpunkt eingezeichnet. Danach wird der Vorgang mit dem Endpunkt als neuem Ausgangspunkt wiederholt, bis die Stromlinie den Rand des Beobachtungsraums erreicht hat. Da Stromlinien keine Aussage über den Betrag der Vektoren erlauben, kann man diesen durch \textbf{Color Mapping} der Stromlinie visualisieren. Oder man zeichnet nur jedes zweite Liniensegment einer Stromlinie bei fester Schrittweite, dann visualisiert die Länge  der Linien die Geschwindigkeit.
+
+Interessiert zusätzlich auch der Zustand des umgebenden Feldes kann man zur Visualisierung der Rotation schmale Bänder sogenannte \textbf{Stream ribbons} nutzen.
 
 \subsection{Konturbaum}
 
