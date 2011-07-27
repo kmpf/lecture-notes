@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.4.5)  24 JUL 2011 00:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.8.27)  26 JUL 2011 16:42
 entering extended mode
  %&-line parsing enabled.
 **VL-Visualisierung.tex
@@ -617,7 +617,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )
-(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+(/etc/texmf/tex/latex/config/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 (/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
@@ -757,24 +757,23 @@ LaTeX Info: Redefining \pageref on input line 19.
 \openout3 = `VL-Visualisierung.out'.
 
 \AtBeginShipoutBox=\box36
-LaTeX Font Info:    Try loading font information for U+msa on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 30.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./VL-Visualisierung.toc
+Class scrbook Info: You've told me to use the font selection of the element
+(scrbook)           `sectioning' that is an alias of element `disposition'
+(scrbook)            on input line 2.
 )
-Overfull \hbox (48.60715pt too wide) in paragraph at lines 30--30
- [][] 
- []
-
-[1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./VL-Visualisierung.toc)
 \tf@toc=\write4
 \openout4 = `VL-Visualisierung.toc'.
 
@@ -790,61 +789,67 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              `scrbook' soon .
 
 
-Overfull \hbox (27.3626pt too wide) in paragraph at lines 46--51
-\OT1/cmr/m/n/12 Drei Tei-le: -Definitionsmenge = Teil-men-ge des Be-ob-ach-tung
-s-raums B$[]$ -Nachbarschaftsrelation
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
  []
 
 
-LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 63.
+Overfull \hbox (39.11247pt too wide) in paragraph at lines 51--55
+[]\OT1/cmr/m/n/12 Drei Tei-le: -Definitionsmenge = Teil-men-ge des Be-ob-ach-tu
+ngs-raums B$[]$ -Nachbarschaftsrelation
+ []
 
 
-Overfull \hbox (0.59074pt too wide) in paragraph at lines 64--65
-[]\OT1/cmr/m/n/12 Partikel wer-den an ei-ner fi-xen Po-si-ti-on (z.B. mit-tels 
-D[]usen am um-str[]omten
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
+
  []
 
 [1
 
-] [2] (./VL-Visualisierung.aux)
+]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 96.
+
+
+Overfull \hbox (0.59074pt too wide) in paragraph at lines 97--98
+[]\OT1/cmr/m/n/12 Partikel wer-den an ei-ner fi-xen Po-si-ti-on (z.B. mit-tels 
+D[]usen am um-str[]omten
+ []
+
+[2]
+Overfull \hbox (8.76518pt too wide) in paragraph at lines 105--106
+\OT1/cmr/m/n/12 Hierbei enth[]alt das Vek-tor-feld In-for-ma-tio-nen []uber Be-
+we-gun-gen. Die-se Be-we-gun-gen k[]onnen
+ []
+
+[3] [4] (./VL-Visualisierung.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 8112 strings out of 493848
- 118815 string characters out of 1152824
- 220580 words of memory out of 3000000
- 11213 multiletter control sequences out of 15000+50000
+ 8127 strings out of 493848
+ 118966 string characters out of 1152823
+ 223580 words of memory out of 3000000
+ 11223 multiletter control sequences out of 15000+50000
  14744 words of font info for 55 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 47i,8n,56p,277b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsection.1.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.1.2.1} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1} has been referenced but does not exist, 
-replaced by a fixed one
-
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/am
-sfonts/cm/cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mssbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb
->
-Output written on VL-Visualisierung.pdf (4 pages, 97622 bytes).
+ 47i,8n,56p,678b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmsl12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmssbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti12.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/euler/eurm10.pfb>
+Output written on VL-Visualisierung.pdf (6 pages, 122018 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 20 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 139 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 
