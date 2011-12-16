@@ -1,0 +1,216 @@
+%% Dokumentenklasse (Koma Script) -----------------------------------------
+\documentclass[%
+   %draft,     % Entwurfsstadium
+   final,      % fertiges Dokument
+	 % --- Paper Settings ---
+   paper=a4,% [Todo: add alternatives]
+   paper=portrait, % landscape
+   pagesize=auto, % driver
+   % --- Base Font Size ---
+   fontsize=11pt,%
+	 % --- Koma Script Version ---
+   %version=last, %
+ ]{scrreprt} % Classes: scrartcl, scrreprt, scrbook
+
+
+% Encoding der Dateien (sonst funktionieren Umlaute nicht)
+% Fuer Linux -> utf8
+% Fuer Windows, alte Linux Distributionen -> latin1
+
+% Empfohlen latin1, da einige Pakete mit utf8 Zeichen nicht
+% funktionieren, z.B: listings, soul.
+%\usepackage[latin1]{inputenc}
+%\usepackage[ansinew]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{ucs}
+%\usepackage[utf8x]{inputenc}
+
+
+%%% Preambel
+\input{preambel/settings}
+\input{preambel/preambel}
+%
+%%%% Neue Befehle
+\input{macros/newcommands}
+\input{macros/TableCommands}
+
+%%% Silbentrennung
+\input{preambel/Hyphenation}
+\hyphenation{Nu kleo ti dyl trans fera sen}
+\hyphenation{Re pressor pro te ins}
+
+%% Dokument Beginn %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\chapter{Bioinformatik 1 - Sequenzanalyse und Genomik}
+\section{Sequenz-Alignment-Problem}
+\subsection{globale, lokale, semiglobale Alignments}
+\subsection{affine Gap-Kosten}
+\subsection{Substitutionsmatrizen, PAM und BLOSUM}
+\subsection{BLAST, FASTA}
+
+\section{Multiple Alignments}
+\subsection{Alignment von Profiles}
+\subsection{clustalw4}
+
+\section{Phylogenierekonstruktion}
+\subsection{distanzbasierte Methoden}
+Diese Methoden benötigen die Kenntnis der (evolutionären) Distanzen zwischen den einzelnen Sequenzen. Diese sind meist in einer Distanzmatrix enthalten.
+\subsubsection{Neighbor-Joining11 3}
+Diese Methode vereinigt jeweils die beiden Knoten einer Distanzmatrix miteinander die die geringste Distanz besitzen und generiert aus diesen Knoten einen neuen Knoten. Die Distanzen aller übrigen Knoten zu diesem neuen Knoten müssen dann berechnet werden und es entsteht eine neue Distanzmatrix. Mit den Knoten dieser Matrix wird wieder verfahren wie beschrieben.
+\subsubsection{(Un)Weighted Pair Group Method with Arithmetic Mean (UPGMA, WPGMA)13}
+
+\subsubsection{Split decomposition, Splitstree1}
+\subsection{Zeichenbasierte Methoden}
+\subsubsection{Maximum-Likelihood8}
+\subsubsection{Maximum Parsimony (Fitch-Algorithmus)}
+\subsection{Tests}
+\subsubsection{Bootstrapping}
+\subsubsection{Quartett-Mapping}
+
+\section{Properties of the genetic code}
+Fourfold degenerate sites, Codon adaptation index (CAI)
+
+\chapter{Bioinformatik 2 - }
+\section{Proteinstrukturen}
+\subsection{Gittermodell, self-avoiding walk}
+\subsection{Threading}
+
+\section{RNA Sekundärstruktur10}
+\subsection{Darstellungsmethoden}
+\subsection{Algorithmus von Nussinov13}
+\subsection{Algorithmus von Zuker6}
+\subsection{Partition Function5}
+\subsection{Stochastic Context Free Grammars7, CYK Algorithmus}
+http://de.wikipedia.org/wiki/Cocke-Younger-Kasami-Algorithmus
+\subsection{Sankoff-Algorithmus12}
+
+
+
+
+
+\chapter{Bioinformatik 3 - Fortgeschrittene Methoden der Bioinformatik}
+
+\section{RNA-folding and search for joint structures}
+Eine Punktmutation hat eine Chance von $\sim$30\% die komplette RNA-Struktur zu zerstören. Nach 100 mya (million years), dies entspricht der Entfernung des LCA (least common ancestors) von Mensch und Maus, wurde im Schnitt jede Sequenzpostion einmal mutiert. Wenn trotz geringer Sequenzähnlichkeit zwei oder mehr RNAs die gleiche Struktur aufweisen, dann ist dies ein Nachweis für die Selektion der Struktur. Pseudoknoten in RNA-Strukturen sind durch normale dynamische Programmierungsansätze nicht auffindbar. Die Konsensusstruktur zeigt kompensatorische (GC $\rightarrow$ AU) oder konsistente (GC~$\rightarrow$~GU) Mutationen auf. Die Mutationen GC~$\rightarrow$~AU oder GC~$\rightarrow$~GU~$\rightarrow$~AU treten häufiger auf als die GC~$\rightarrow$~UA.
+
+Es existieren verschiedene Maße um die evolutionäre Konservierung von RNA Sekundärstrukturen zu messen. Dazu gehören:
+\begin{itemize}
+ \item Methoden die auf der Faltungsenergie basieren (, )
+  \begin{itemize}
+  \item SCI (structural conservation index): $SCI = E_{cons}/E_{single}$
+  \item $SCI_{RNAeval} = $
+  \end{itemize}
+ \item 
+\end{itemize}
+snoRNAs\\
+Um die Konsensusstruktur mehrerer Sequenzen zu ermitteln, können drei unterschiedliche Wege beschritten werden.
+\begin{enumerate}
+	\item erst ein Sequenzalignment und dann dieses Falten (nur für Sequenzen mit hoher Ähnlichkeit sinnvoll),
+	\item erst alle RNAs falten und dann Strukturalignment,
+	\item oder versuchen sowohl Sequenz- als auch Strukturalignment parallel zu berechnen
+\end{enumerate}
+
+\subsection{Sankoff-Algorithm}
+Sankoff = Needleman/Wunsch + Nussinov\\
+\paragraph{Sankoff-Optimization}
+Will, Reiche et.al., Sankoff-Optimization: LocARNA (local alignment of RNAs)
+
+\subparagraph{Probabilisitic partition function version}
+\subparagraph{Full energy model (dynalign, foldalign)}
+\subparagraph{RNA-interaction problem}
+
+\section{Dynamic programming on trees}
+Dynamic Programming (parsimony likelihood)\\
+rooted ordered/unordered\\
+
+\subsection{Fitch-Algorithm}
+Fitch - Score-Minimization
+\subsection{Transcription factor binding sites measures mutation/selection - birth/death rates (Wolfgang Otto PhD thesis)}
+Birth rates ($\lambda$) and death rates ($\mu$) 
+\subsection{Phylogenetic targeting (Christian Arnold, Charly Nunn)}
+Welche Datenpunkte erheben um Aussage treffen zu können? Hierbei kann ein Tree automatisch nach den maximal scorenden paarweisen Kombinationen von Blättern durchsucht werden, so dass keine Kante des Baums mehrfach genutzt wird. Dies ist deshalb notwendig damit die Speziespaare  phylogenetisch voneinander unabhängig sind.
+\subsection{Tree Editing / Tree Alignments}
+RNA forester
+\section{Vergleich von RNA Sekundärstrukturen}
+\subsection{Baumdarstellung}
+\subsection{Tree Alignments, Zhang-Shasha Algorithmus2}
+
+\section{Evolutionary rates}
+mutation rates, 	biases, Chi Square-, Tajimas-rate, - Wagner-, relative rates test.
+
+\section{Phylogenetic footprinting}
+
+\section{Hannenhalli-Pevzner Theory, Sorting by Reversals}
+\section{Zyklische Alignments9}
+\section{BBQ}
+\section{Hidden Markov Models für CpG Islands}
+\section{Image processing of biological data (S. Prohaska)}
+
+\section{Präbiotische Evolution}
+\subsection{Quasispecies und Hypercycle}
+Literatur
+
+1
+D. Huson. (1998) SplitsTree: analyzing and visualizing evolutionary data. Bioinformatics Vol. 14(1): 68-73. [LINK]
+
+2
+K. Zhang and D. Shasha. (1989) Simple Fast Algorithms for the Editing Distance between Trees and Related Problems. SIAM Journal on Computing Vol. 18(6): 1245-1262.
+
+3
+J. Studier and K. Keppler. (1988) A note on the neighbor-joining algorithm of Saitou and Nei. Mol Biol Evol Vol. 5(6): 729-731. [LINK]
+
+4
+J. Thompson, D. Higgins and T. Gibson. (1994) CLUSTAL W: improving the sensitivity of progressive multiple sequence alignment through sequence weighting, position-specific gap penalties and weight matrix choice.. Nucleic Acids Res. Vol. 22: 4673-4680.
+
+5
+J. McCaskill. (1990) The equilibrium partition function and base pair binding probabilities for RNA secondary structure. Biopolymers Vol. 29(6-7): 1105-1119.
+
+6
+M. Zuker and P. Stiegler. (1981) Optimal computer folding of large RNA sequences using thermodynamics and auxiliary information. Nucl. Acids Res. Vol. 9(1): 133-148. [LINK]
+
+7
+R. Dowell and S. Eddy. (2004) Evaluation of several lightweight stochastic context-free grammars for RNA secondary structure prediction. BMC Bioinformatics Vol. 5(1): 71. [LINK]
+
+8
+J. Felsenstein. (1981) Evolutionary trees from DNA sequences: A maximum likelihood approach. Journal of Molecular Evolution Vol. 17(6): 368-376. [LINK]
+
+9
+J. Gregor and M. Thomason. (1993) Dynamic Programming Alignment of Sequences Representing Cyclic Patterns. IEEE Trans. Pattern Anal. Mach. Intell. Vol. 15(2): 129-135.
+
+10
+I. Hofacker, W. Fontana, P. Stadler, L. Bonhoeffer, M. Tacker and P. Schuster. (1994) Fast Folding and Comparison of RNA Secondary Structures. Monatsh. Chem. Vol. 125: 167-188.
+
+11
+N. Saitou and M. Nei. (1987) The neighbor-joining method: a new method for reconstructing phylogenetic trees. Mol Biol Evol Vol. 4(4): 406-425. [LINK]
+
+12
+D. Sankoff. (1985) Simultaneous Solution of the RNA Folding, Alignment and Protosequence Problems. SIAM Journal on Applied Mathematics Vol. 45(5): 810-825. [LINK]
+
+13
+R. Nussinov, G. Pieczenik, J. Griggs and D. Kleitman. (1978) Algorithms for Loop Matchings. SIAM Journal on Applied Mathematics Vol. 35(1): 68-82. [LINK]
+
+14
+R. Sokal and C. Michener. (1958) A statistical method for evaluating systematic relationships. University of Kansas Science Bulletin Vol. 38: 1409-1438.
+
+
+
+
+% Anhang (Bibliographie darf im deutschen nicht in den Anhang!)
+%\bibliography{bib/BibtexDatabase}
+%\bibliographystyle{bib/bst/Science.bst}
+%\clearpage
+
+% Abbildungs- und Tabellenverzeichnis
+% Anhang
+%\appendix
+% 'Anhang' ins Inhaltsverzeichnis
+%\phantomsection
+%\addcontentsline{toc}{part}{Anhang}
+
+%\input{content/Z-Anhang}
+
+%\IfDefined{printindex}{\printindex}
+%\IfDefined{printnomenclature}{\printnomenclature}
+
+%% Dokument ENDE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

@@ -1,0 +1,117 @@
+\documentclass
+[
+   draft,     % Entwurfsstadium
+   %final,      % fertiges Dokument
+	 % --- Paper Settings ---
+   paper=a4,% [Todo: add alternatives]
+   paper=portrait, % landscape
+   pagesize=auto, % driver
+   % --- Base Font Size ---
+   fontsize=11pt,%
+ % --- Koma Script Version ---
+   %version=last, %
+   abstract=true, %
+   titlepage=true %
+ ]
+ {scrartcl}
+
+%\documentclass[11pt,a4paper,portrait,oneside,titlepage,draft]{scrreprt}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{upgreek}
+
+\author{Christoph K"ampf}
+\title{RNA- und Proteinstrukturen}
+\begin{document}
+\section{RNA-Strukturen}
+Es gibt verschiedene Modelle auf denen RNA Sekundärstrukturvorhersage basieren kann. Diese Modelle wurden im Verlauf der Entwicklung komplexer um weitere, in den Vorläufermodellen nicht vorhandene, biologische Eigenschaften mit zu erfassen.
+
+\subsection{Nussinov Algorithmus(1978)}
+Das Ziel dieses Algorithmuses ist die Maximierung der Basenpaaranzahl. Der Algorithmus zieht einige biologische Gegebenheiten nicht in Betracht, zu diesen gehören:
+\begin{itemize}
+\item Pseudo-Knoten
+\item Interaktionen zwischen ungepaarten Regionen
+\item Stacking Interaktionen
+\end{itemize}
+
+\subsection{Zuker \& Stiegler Algorithmus(1981)}
+Der von Zuker \& Stiegler entwickelte Algorithmus errechnet Sekundärstrukturen auf der Basis der "Minimum Free Energy". Dazu verwendet der Algorithmus experimentell ermittelte Energiewerte. Der beschriebene Algorithmus baut auf den Algorithmen von Nussinov (1978) und Smith \& Waterman (1978) auf. In ihrem Paper sie definieren 
+\begin{itemize}
+\item Hairpin loop
+\item Bulge loop
+\item Interior loop
+\item Bifurcation loop (wird heute als multiloop bezeichnet)
+\item stacking region 
+\end{itemize}
+
+\subsection{McCaskill's Algorithmus (1991)}
+
+
+\subsection{Leontis-Westhof Notation}
+
+
+\section{Protein-Strukturen}
+
+Proteine besitzen mehrere Strukturebenen. Die basalste Ebene stellt die Primärstruktur dar. Sie listet die Sequenz der Aminosäuren (vom N- zum C-Terminus) auf. Die Sekundärstruktur beschreibt welche Bereiche der Primärstruktur sich in $\upbeta$-Faltblätter und $\upalpha$-Helices falten. Die Tertiärstruktur gibt an wie die Sekundärstrukturelemente räumlich zu einander angeordnet sind. Wiederkehrende räumliche Anordnungen dieser Elemente werden als Motive bezeichnet. Die Quarternärstruktur beschreibt wie sich mehrere Polypeptidketten zu einem Multimer zusammen lagern. Proteine können entfaltet und zurück gefaltet (das funktioniert nur bedingt) werden. Es wird häufig angenommen, dass sich ein Protein in die thermodynamisch bevorzugte Konformation faltet. Basierend auf dieser Annahme erwartete man, dass mathematische Modelle die Vorhersage der Proteinstruktur ermöglichen sollten. Daraus entwickelte sich die Idee des \textbf{Molecular Modelling}.
+
+\paragraph{Anfinsen’s dogma}
+Die native Struktur eines Proteins wird einzig und allein von seiner Aminosäuresequenz bestimmt. Sie ist ein einzigartiges, stabiles und kinetisch zugängliches freies Energie Minimum.
+
+\paragraph{Levinthal’s paradox}
+Die Anzahl der möglichen Konformationen die ein gegebenes Protein annehmen kann, ist astronomisch groß. Eine Polypeptidkette mit 100 Aminosäuren besitzt 99 Peptidbindungen und damit 198 $\Phi$- und $\Psi$-Bindungswinkel. Wenn jeder dieser Bindungswinkel drei stabile Konformationen besitzt, existieren 3198 mögliche Konformationen.
+
+\subsection{Molecular Modelling}
+Um das Modellieren von Proteine  dennoch zu ermöglichen werden vereinfachende Annahmen getroffen. So werden Atome als Punktladungen mit einer assoziierten Masse dargestellt. Die kollektive mathematische Beschreibung einen Proteins erfolgt durch die Potentialfunktion. Diese fasst die Energiebeiträge verschiedener physikalischer Kräfte und die Potentiale zwischen allen Paaren von Atomen (“pair potential”), diese bilden das Kraftfeld (force field). Molekulare Mechanik minimiert die statische Potentialenergie und Molekulare Dynamik (molecular dynamics) modelliert das Verhalten des Systems über die Zeit.
+
+In ein Kraftfeld fließen alle Energiebeiträge ein die die Struktur eines Proteins beeinflussen. Diese sind:
+\begin{itemize}
+\item Energiebeiträge der chemischen Bindungen
+\begin{itemize}
+\item Bindungslänge (durchschnittliche Entfernung zweier chemisch verbundener Atome im Molekül)
+\item Bindungswinkel (Winkel zwischen zwei aufeinander folgenden Bindungen)
+\item Torsionswinkel (Winkel zwischen den beiden Flächen (1. Fläche: Atome 1,2,3; 2. Fläche: Atome 2,3,4) die von vier Atomen in einer Kette gebildet werden)
+\end{itemize}
+\item Nicht-Bindungsenergiebeiträge
+\begin{itemize}
+\item van der Waals Energien
+\item Elektrostatische Wechselwirkungen
+\item conjugated system distortion
+\item Wasserstoffbrücken
+\item Lösungsmitteleinflüsse
+\end{itemize}
+\end{itemize}
+Damit ergibt sich die Gesamtenergie zu:
+\begin{equation}
+E_{total} = E_{bond} + E_{angle} + E_{torsion} + E_{Waals} + E_{coulomb}
+\end{equation}
+
+
+\subsubsection{Statistische Potentiale}
+A statistical potential can be derived from known structures and probabilistic theory. The equation for the statistical potential is:
+\begin{equation}
+E_{total} = −kT \underset{s}{\sum} \ln \frac{P(s)}{P_R(s)}
+\end{equation}
+
+
+\subsubsection{Protein Threading Problem}
+
+
+\subsection{Protein Secondary Structure Prediction}
+\subsubsection{Chou-Fasman Method}
+
+\subsubsection{\textbf{G}arnier, \textbf{O}sguthorpe und \textbf{R}obson Methode}
+
+\subsubsection{Neuronale Netzwerke zur Sekundärstrukturvorhersage}
+
+\subsection{3D Structural Alignment of Proteins}
+
+
+
+\begin{thebibliography}{----}
+ \bibitem{SHAPE_PLoS} Wilkinson KA, Gorelick RJ, Vasa SM, Guex N, Rein A, et al. (2008) High-throughput SHAPE analysis reveals structures in HIV-1 genomic RNA strongly conserved across distinct biological states. PLoS Biol 6(4): e96.
+\end{thebibliography}
+\end{document}
